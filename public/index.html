@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="linkedViews.css"></link>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<h1>Democratic Primary Data Dashboard<h1>
+<div id="pollText">
+  <div class="pollHalf" id="leftBox"></div>
+  <div class="pollHalf" id="rightBox"></div>
+</div>
+<script src="stateWide.js"></script>
+<h1>Per District Delegates</h1>
+<div id="blocks"></div>
+<br />
+<br />
+<button onclick="buttonAction()" style="border-radius:10px;">Model</button>
+<select id="selectBox" onchange="changeFunc();" style="height:30px">
+	<option selected disabled hidden style="display:none" value=''></option>
+	<option value="1">Total population</option>
+	<option value="2">Median age (years)</option>
+	   <option value="3">White</option>
+	   <option value="4">Black or African American</option>
+	   <option value="5">American Indian and Alaska Native</option>
+	   <option value="6">Asian</option>
+	   <option value="7">Native Hawaiian and Other Pacific Islander</option>
+	   <option value="8">Hispanic or Latino (of any race)</option>
+	   <option value="9">Born in the United States</option>
+	   <option value="10">Foreign born</option>
+	   <option value="11">Civilian veterans</option>
+	   <option value="12">Percent Unemployed</option>
+	   <option value="13">Owner-occupied</option>
+	   <option value="14">Renter-occupied</option>
+	   <option value="15">Median (dollars)</option>
+	   <option value="16">Median household income (dollars)</option>
+	   <option value="17">Mean household income (dollars)</option>
+	   <option value="18">All families</option>
+	   <option value="19">All people</option>
+	   <option value="20">Percent high school graduate or higher</option>
+	   <option value="21">Percent bachelor's degree or higher</option>
+</select>
+<br />
+<br />
+
+<div id="viz">
+  <div id="map">
+  	<div id="box">
+  		<div id="left">
+  			<p id="max"></p>
+  			<p id="min"></p>
+  		</div>
+  		<div id="legend"></div>
+  	</div>
+  </div>
+</div>
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/queue.v1.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+
+<script src="linkedViewsD3.js"></script>  <!-- adds the blocks and map -->
+<script src="linkedViews.js"></script>  <!-- adds the button function -->
+<script src="request.js"></script>
+
+</body>
+</html>
